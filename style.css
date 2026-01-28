@@ -1,0 +1,74 @@
+/* General Reset to ensure consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling: Smooth gradient background */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    background: linear-gradient(135deg, #61c29d 20%, #7935d8 50% );
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Navigation Container Styling */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Horizontally aligned center */
+    padding-top: 30px;
+}
+
+/* Unordered List Styling (The Bar) */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Spacing between items */
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    padding: 15px 30px;
+    border-radius: 50px; /* Pill shape */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Link Styling */
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 25px;
+    border-radius: 25px;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover Effect for non-active items */
+.nav-links li a:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Active Menu Item (Home) Styling */
+/* Requirement: White background and contrasting text */
+.nav-links li a.active {
+    background-color: white;
+    color: #764ba2; /* Matches the deep purple of the background gradient */
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Responsive Design for smaller screens (Mobile) */
+@media (max-width: 600px) {
+    .nav-links {
+        flex-direction: column; /* Stack items vertically */
+        width: 90%;
+        text-align: center;
+        border-radius: 15px;
+        gap: 10px;
+    }
+
+    .nav-links li a {
+        display: block; /* Make links full width of the container */
+    }
+}
